@@ -125,7 +125,7 @@ def main():
     order_freq.columns = [ 'Customer ID', 'Order_Frequency' ]
 
     # Average order vl
-    agv_order = df.groupby( 'Customer ID' )[ 'Sales' ].mean().reset_index()
+    agv_order = df.groupby( 'Customer ID' )[ 'Order ID' ].mean().reset_index()
     agv_order.columns = [ 'Customer ID', 'Avg_Order_Value' ]
 
     # Merge
